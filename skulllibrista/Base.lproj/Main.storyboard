@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="skulllibrista" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="street" translatesAutoresizingMaskIntoConstraints="NO" id="5z3-Vg-KDo">
+                                <rect key="frame" x="-986" y="0.0" width="1400" height="2800"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player0" translatesAutoresizingMaskIntoConstraints="NO" id="1Ab-XR-OOH">
+                                <rect key="frame" x="137" y="313" width="140" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Ab-XR-OOH" secondAttribute="height" multiplier="1:2" id="UH4-eu-wN0"/>
+                                    <constraint firstAttribute="width" constant="140" id="zpL-Nb-gJg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="ji9-lE-rwK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="228"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você precisa de equilibrar. Se sair da área, é GAME OVER." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcG-t3-0d9">
+                                <rect key="frame" x="36" y="64" width="342" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7v0-cx-uI6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R9c-VO-qGs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameOver" translatesAutoresizingMaskIntoConstraints="NO" id="zmA-gu-o8U">
+                                        <rect key="frame" x="107" y="28" width="200" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zmA-gu-o8U" secondAttribute="height" multiplier="452:366" id="c7z-5b-RoO"/>
+                                            <constraint firstAttribute="width" constant="200" id="weK-Wz-Ho2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você jogou durante X segundos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTB-r8-dFf">
+                                        <rect key="frame" x="81" y="525.5" width="252" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSA-1w-mGN">
+                                        <rect key="frame" x="50" y="576.5" width="314" height="43"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="playAgain"/>
+                                        <connections>
+                                            <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfJ-5s-WCY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zmA-gu-o8U" firstAttribute="top" secondItem="R9c-VO-qGs" secondAttribute="top" constant="28" id="2t5-Cv-MeJ"/>
+                                    <constraint firstItem="DTB-r8-dFf" firstAttribute="centerX" secondItem="R9c-VO-qGs" secondAttribute="centerX" id="CfR-A9-81J"/>
+                                    <constraint firstItem="BSA-1w-mGN" firstAttribute="centerX" secondItem="R9c-VO-qGs" secondAttribute="centerX" id="Ysd-TW-rhz"/>
+                                    <constraint firstItem="BSA-1w-mGN" firstAttribute="top" secondItem="DTB-r8-dFf" secondAttribute="bottom" constant="30" id="hJY-PK-MY1"/>
+                                    <constraint firstItem="zmA-gu-o8U" firstAttribute="centerX" secondItem="R9c-VO-qGs" secondAttribute="centerX" id="vGv-Nv-RHD"/>
+                                    <constraint firstItem="BSA-1w-mGN" firstAttribute="centerY" secondItem="R9c-VO-qGs" secondAttribute="centerY" constant="150" id="zyt-W9-4oz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Ab-XR-OOH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2Pw-E7-bGn"/>
+                            <constraint firstAttribute="bottom" secondItem="R9c-VO-qGs" secondAttribute="bottom" id="42G-mX-fsB"/>
+                            <constraint firstAttribute="trailing" secondItem="R9c-VO-qGs" secondAttribute="trailing" id="721-fA-J8x"/>
+                            <constraint firstItem="1Ab-XR-OOH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7le-Sk-KDv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ji9-lE-rwK" secondAttribute="trailing" id="G2F-rG-Ie4"/>
+                            <constraint firstItem="1Ab-XR-OOH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="L2b-aZ-5Rd"/>
+                            <constraint firstItem="R9c-VO-qGs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MKX-gi-HdS"/>
+                            <constraint firstItem="EcG-t3-0d9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Tq0-CZ-nJb"/>
+                            <constraint firstItem="R9c-VO-qGs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Txc-ma-39D"/>
+                            <constraint firstAttribute="trailing" secondItem="EcG-t3-0d9" secondAttribute="trailing" constant="36" id="WvQ-zc-zc1"/>
+                            <constraint firstItem="EcG-t3-0d9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="cv9-8g-dLP"/>
+                            <constraint firstItem="1Ab-XR-OOH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h7h-X8-MFn"/>
+                            <constraint firstItem="ji9-lE-rwK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hnc-TC-daO"/>
+                            <constraint firstItem="ji9-lE-rwK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tok-o5-n5r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lbInstructions" destination="EcG-t3-0d9" id="xEA-k0-uYB"/>
+                        <outlet property="lbTimePLayer" destination="DTB-r8-dFf" id="Bwb-RI-7d6"/>
+                        <outlet property="player" destination="1Ab-XR-OOH" id="QcH-0d-FeN"/>
+                        <outlet property="street" destination="5z3-Vg-KDo" id="xxE-W5-GtK"/>
+                        <outlet property="viGameOver" destination="R9c-VO-qGs" id="dVy-BL-9lg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gameOver" width="226" height="168"/>
+        <image name="playAgain" width="290" height="29"/>
+        <image name="player0" width="588" height="1176"/>
+        <image name="street" width="1400" height="2800"/>
+        <image name="sun" width="1029" height="228"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
